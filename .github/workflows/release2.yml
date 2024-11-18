@@ -55,6 +55,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./MyExecutable   # Убедитесь, что путь правильный к вашему исполняемому файлу!
-          asset_name: MyExecutable       # Имя артефакта в релизе
+          asset_path: ./physics   # Убедитесь, что путь правильный к вашему исполняемому файлу!
+          asset_name: physics       # Имя артефакта в релизе
           asset_content_type: application/octet-stream  # Тип контента для исполняемого файла
