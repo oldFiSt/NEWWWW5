@@ -19,9 +19,9 @@ jobs:
         with:
           submodules: true
 
-      # Шаг 2: Установка зависимостей (например, Boost)
+      # Шаг 2: Установка зависимостей (например, Boost и SFML)
       - name: Install dependencies
-        run: brew install cmake boost  # Установка CMake и Boost через Homebrew
+        run: brew install cmake boost sfml  # Установка CMake, Boost и SFML через Homebrew
 
       # Шаг 3: Генерация файлов сборки с помощью CMake
       - name: Configure CMake
