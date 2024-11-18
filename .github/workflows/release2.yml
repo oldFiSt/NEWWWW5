@@ -19,9 +19,9 @@ jobs:
         with:
           submodules: true
 
-      # Шаг 2: Установка зависимостей (например, Boost)
+      # Шаг 2: Установка зависимостей (например, Boost и SFML)
       - name: Install dependencies
-        run: sudo apt-get update && sudo apt-get install libboost-test-dev cmake g++ -y
+        run: sudo apt-get update && sudo apt-get install libboost-test-dev cmake g++ libsfml-dev -y
 
       # Шаг 3: Генерация файлов сборки с помощью CMake
       - name: Configure CMake
