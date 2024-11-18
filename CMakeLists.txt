@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.7.2)
 project(physics)
 
 set(CMAKE_CXX_STANDARD 17)
+set(CXX_STANDARD_REQUIRED ON)
 
 # Пытаемся найти предустановленный SFML
 find_package(SFML COMPONENTS graphics)
@@ -37,6 +38,8 @@ add_executable(physics
  
 set(CMAKE_INSTALL_PREFIX "/usr/local")
 
+install(TARGETS physics DESTINATION bin)
+
 target_link_libraries(physics PRIVATE sfml-graphics)
 
 
@@ -47,7 +50,7 @@ target_compile_options(physics PRIVATE
 
   # Установка по умолчани
 # Установка исполняемого файла
-install(TARGETS physics DESTINATION bin)
+
 
 # Установка конфигурации для пакета
 if(APPLE)
