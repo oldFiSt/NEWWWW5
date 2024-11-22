@@ -16,7 +16,6 @@ void Dust::setVelocity(const Velocity& velocity) {
  * @return скорость объекта
  */
 Velocity Dust::getVelocity() const {
-    // TODO: место для доработки
     return velocity_;
 }
 

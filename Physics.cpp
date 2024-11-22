@@ -59,6 +59,7 @@ void Physics::collideWithBox(std::vector<Ball>& balls, std::vector<Dust>& dusts)
             Dust dust(velocity, ball.getCenter(), 8, ball.getColor(), true, 0.8);
             dusts.push_back(dust);
             ball.setVelocity(vector);
+        
         } else if (isOutOfRange(p.y, topLeft.y + r, bottomRight.y - r)) {
             Point vector = ball.getVelocity().vector();
             vector.y = -vector.y;
